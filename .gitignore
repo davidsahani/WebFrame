@@ -1,0 +1,43 @@
+# Build artifacts
+/build/
+/CMakeFiles/
+/CMakeCache.txt
+/*.vcxproj*
+/*.sln
+/*.cbp
+/*.Makefile
+/moc_*
+/ui_*
+/qrc_*
+
+# vcpkg installed packages
+/vcpkg/
+/vcpkg_installed/
+
+# Qt user-specific settings
+*.user
+*.pro.user
+*.qmake.stash
+*.qmake.cache
+
+# IDE-specific ignores
+.vscode/
+.idea/
+.DS_Store
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*.swo
+
+# Executables and libraries
+*.exe
+*.dll
+*.so
+*.dylib
+*.a
+*.lib
+*.o
+*.obj
+*.pdb
