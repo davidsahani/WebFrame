@@ -1,0 +1,23 @@
+{
+  "builtin-baseline": "300239058e33420acd153135b3f6e6b187828992",
+  "dependencies": [
+    {
+      "name": "imgui",
+      "version>=": "1.91.8#4",
+      "features": [
+        "win32-binding",
+        "dx11-binding",
+        "docking-experimental"
+      ]
+    },
+    {
+      "name": "stb",
+      "version>=": "2024-07-29#1"
+    },
+    {
+      "name": "simpleini",
+      "version>=": "4.22"
+    },
+    "webview2"
+  ]
+}
