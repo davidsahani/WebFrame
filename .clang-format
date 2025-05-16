@@ -1,0 +1,15 @@
+# https://clang.llvm.org/docs/ClangFormatStyleOptions.html
+
+BasedOnStyle: LLVM
+IndentWidth: 4
+ColumnLimit: 0
+UseTab: Never
+BreakBeforeBraces: Attach
+SortIncludes: false
+
+Cpp11BracedListStyle: true
+AlignAfterOpenBracket: BlockIndent
+AllowShortLambdasOnASingleLine: All
+AllowShortBlocksOnASingleLine: Always
+AllowAllParametersOfDeclarationOnNextLine : true
+AllowShortIfStatementsOnASingleLine: WithoutElse

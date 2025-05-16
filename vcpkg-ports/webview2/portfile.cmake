@@ -1,0 +1,20 @@
+# Copy headers
+file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/include/" DESTINATION "${CURRENT_PACKAGES_DIR}/include")
+
+# Choose static or dynamic linking
+if(VCPKG_LIBRARY_LINKAGE STREQUAL "dynamic")
+    set(VCPKG_POLICY_DLLS_WITHOUT_EXPORTS enabled)
+
+    file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/bin/" DESTINATION "${CURRENT_PACKAGES_DIR}/bin")
+    file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/lib/" DESTINATION "${CURRENT_PACKAGES_DIR}/lib")
+    file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/bin/" DESTINATION "${CURRENT_PACKAGES_DIR}/debug/bin")
+    file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/lib/" DESTINATION "${CURRENT_PACKAGES_DIR}/debug/lib")
+else()
+    file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/lib/WebView2LoaderStatic.lib"
+         DESTINATION "${CURRENT_PACKAGES_DIR}/lib")
+    file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/lib/WebView2LoaderStatic.lib"
+         DESTINATION "${CURRENT_PACKAGES_DIR}/debug/lib")
+endif()
+
+file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/share/unofficial-webview2" DESTINATION "${CURRENT_PACKAGES_DIR}/share")
+file(INSTALL "${CMAKE_CURRENT_LIST_DIR}/share/webview2" DESTINATION "${CURRENT_PACKAGES_DIR}/share")

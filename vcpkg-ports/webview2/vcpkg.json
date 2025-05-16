@@ -1,0 +1,9 @@
+{
+    "name": "webview2",
+    "version-string": "1.0.3179.45",
+    "description": "Microsoft WebView2 SDK for embedding Edge-based web content.",
+    "dependencies": [
+        "wil"
+    ],
+    "supports": "windows & x64"
+}
